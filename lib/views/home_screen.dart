@@ -30,7 +30,8 @@ class HomeScreen extends StatelessWidget {
                       leading: CircleAvatar(
                         backgroundImage: NetworkImage(data[index].avatar!),
                       ),
-                      title: Text(data[index].firstName!),
+                      title: Text(
+                          "${data[index].firstName} ${data[index].lastName}"),
                       subtitle: Text(data[index].email!),
                       trailing: Text(data[index].id.toString()),
                     );
