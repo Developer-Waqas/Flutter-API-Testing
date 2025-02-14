@@ -9,9 +9,22 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('API Testing'),
+        title: Text(
+          'API Testing',
+          style: TextStyle(
+              fontSize: 30, fontWeight: FontWeight.w500, color: Colors.white),
+        ),
         centerTitle: true,
         backgroundColor: Colors.blue,
+        actions: [
+          IconButton(
+              onPressed: () {},
+              icon: Icon(
+                Icons.navigate_next,
+                size: 30,
+                color: Colors.white,
+              )),
+        ],
       ),
       body: FutureBuilder(
           future: EmployeeServices().getEmployeeData(),
